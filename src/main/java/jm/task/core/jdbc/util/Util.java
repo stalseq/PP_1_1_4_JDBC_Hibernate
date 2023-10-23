@@ -11,8 +11,8 @@ public class Util {
     private final static String url = "jdbc:mysql://localhost:3306/mybd";
     private final static String user = "root";
     private final static String password = "root";
+    private static Connection connection = null;
     public Connection getConnection() throws SQLException {
-        Connection connection = null;
         try {
             Class.forName(DB_SQL);
             connection = DriverManager.getConnection(url, user, password);
